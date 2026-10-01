@@ -1,0 +1,504 @@
+/* ===== 中国风个人主页样式 ===== */
+
+.page {
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--cn-font);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* 祥云装饰 */
+.cloud-decoration {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.06;
+}
+
+.cloud {
+  position: absolute;
+  font-size: 120px;
+  color: var(--red);
+}
+
+.cloud-1 {
+  top: 10%;
+  left: 5%;
+  transform: rotate(-15deg);
+}
+
+.cloud-2 {
+  bottom: 15%;
+  right: 8%;
+  transform: rotate(10deg);
+  font-size: 150px;
+}
+
+/* 头部 */
+.header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 40px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  border-bottom: 2px solid var(--red-light);
+}
+
+.avatar {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.avatar-inner {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--red), var(--red-dark));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(139, 0, 0, 0.3);
+  border: 3px solid var(--gold);
+}
+
+.avatar-char {
+  font-size: 56px;
+  color: var(--paper);
+  font-weight: bold;
+  font-family: var(--cn-font);
+}
+
+.seal {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  width: 36px;
+  height: 36px;
+  background: var(--red);
+  color: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 4px;
+  transform: rotate(-8deg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--gold);
+}
+
+.intro {
+  text-align: left;
+}
+
+.name {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--ink-dark);
+  margin: 0 0 8px;
+  letter-spacing: 8px;
+}
+
+.title {
+  font-size: 18px;
+  color: var(--red);
+  margin: 0 0 12px;
+  letter-spacing: 2px;
+}
+
+.motto {
+  font-size: 15px;
+  color: var(--ink-light);
+  margin: 0;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+/* 导航 */
+.nav {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.nav-item {
+  padding: 10px 28px;
+  font-size: 17px;
+  font-family: var(--cn-font);
+  background: transparent;
+  border: 1px solid var(--red-light);
+  color: var(--ink);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 4px;
+  border-radius: 2px;
+}
+
+.nav-item:hover {
+  background: var(--red-light);
+  color: var(--red-dark);
+}
+
+.nav-item.active {
+  background: var(--red);
+  color: var(--paper);
+  border-color: var(--red);
+  box-shadow: 0 4px 12px rgba(139, 0, 0, 0.25);
+}
+
+/* 内容区 */
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 40px 60px;
+  min-height: 400px;
+}
+
+.section {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: 26px;
+  color: var(--ink-dark);
+  margin: 20px 0 36px;
+  letter-spacing: 6px;
+  font-weight: 600;
+}
+
+.title-line {
+  flex: 1;
+  max-width: 80px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--red), transparent);
+}
+
+/* 关于我 */
+.about-text {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 36px;
+  line-height: 2;
+  font-size: 17px;
+  color: var(--ink);
+}
+
+.about-text p {
+  margin: 0 0 16px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 12px;
+  background: var(--paper-dark);
+  border: 1px solid var(--red-light);
+  border-radius: 4px;
+  transition: transform 0.3s;
+}
+
+.info-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(139, 0, 0, 0.12);
+}
+
+.info-label {
+  font-size: 13px;
+  color: var(--ink-light);
+  margin-bottom: 8px;
+  letter-spacing: 2px;
+}
+
+.info-value {
+  font-size: 16px;
+  color: var(--ink-dark);
+  font-weight: 600;
+}
+
+.status-online {
+  color: var(--red);
+}
+
+/* 技艺 */
+.skill-list {
+  max-width: 560px;
+  margin: 0 auto 40px;
+}
+
+.skill-item {
+  margin-bottom: 24px;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.skill-name {
+  font-size: 16px;
+  color: var(--ink-dark);
+  letter-spacing: 2px;
+}
+
+.skill-level {
+  font-size: 14px;
+  color: var(--red);
+  font-weight: 600;
+}
+
+.skill-bar {
+  height: 10px;
+  background: var(--paper-dark);
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid var(--red-light);
+}
+
+.skill-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--red), var(--gold));
+  border-radius: 5px;
+  transition: width 0.8s ease;
+}
+
+.hobbies {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.hobbies h3 {
+  font-size: 18px;
+  color: var(--ink-dark);
+  margin-bottom: 16px;
+  letter-spacing: 4px;
+}
+
+.hobby-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.hobby-tag {
+  padding: 6px 18px;
+  background: var(--paper-dark);
+  border: 1px solid var(--red-light);
+  border-radius: 20px;
+  font-size: 15px;
+  color: var(--ink);
+  transition: all 0.3s;
+}
+
+.hobby-tag:hover {
+  background: var(--red);
+  color: var(--paper);
+  border-color: var(--red);
+}
+
+/* 作品 */
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+  position: relative;
+  padding: 28px 24px;
+  background: var(--paper-dark);
+  border: 1px solid var(--red-light);
+  border-radius: 4px;
+  text-align: left;
+  transition: all 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(139, 0, 0, 0.15);
+  border-color: var(--red);
+}
+
+.project-tag {
+  display: inline-block;
+  padding: 3px 12px;
+  background: var(--red);
+  color: var(--paper);
+  font-size: 12px;
+  border-radius: 2px;
+  margin-bottom: 14px;
+  letter-spacing: 2px;
+}
+
+.project-title {
+  font-size: 20px;
+  color: var(--ink-dark);
+  margin: 0 0 10px;
+  letter-spacing: 2px;
+}
+
+.project-desc {
+  font-size: 14px;
+  color: var(--ink-light);
+  line-height: 1.7;
+  margin: 0 0 16px;
+}
+
+.project-link {
+  font-size: 14px;
+  color: var(--red);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+/* 联络 */
+.contact-list {
+  max-width: 480px;
+  margin: 0 auto 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 24px;
+  background: var(--paper-dark);
+  border: 1px solid var(--red-light);
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: all 0.3s;
+}
+
+.contact-item:hover {
+  border-color: var(--red);
+  background: var(--red-light);
+  transform: translateX(5px);
+}
+
+.contact-icon {
+  font-size: 24px;
+  color: var(--red);
+  width: 32px;
+  text-align: center;
+}
+
+.contact-text {
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.contact-note {
+  text-align: center;
+  color: var(--ink-light);
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* 页脚 */
+.footer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 24px;
+  border-top: 1px solid var(--red-light);
+  color: var(--ink-light);
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+    padding: 40px 20px 30px;
+  }
+
+  .intro {
+    text-align: center;
+  }
+
+  .name {
+    font-size: 32px;
+    letter-spacing: 6px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .nav-item {
+    padding: 8px 18px;
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+
+  .content {
+    padding: 16px 20px 40px;
+  }
+
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 22px;
+    letter-spacing: 4px;
+  }
+}

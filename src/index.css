@@ -1,0 +1,50 @@
+:root {
+  /* 中国风配色 */
+  --paper: #f5f0e8;          /* 宣纸色 */
+  --paper-dark: #ede6d8;     /* 深宣纸色 */
+  --ink: #3a3a3a;            /* 墨色 */
+  --ink-dark: #1a1a1a;       /* 浓墨 */
+  --ink-light: #7a7068;      /* 淡墨 */
+  --red: #a52a2a;            /* 中国红 */
+  --red-dark: #7a1a1a;       /* 深红 */
+  --red-light: rgba(165, 42, 42, 0.12); /* 淡红 */
+  --gold: #c9a961;           /* 金色 */
+
+  --cn-font: 'Noto Serif SC', 'Songti SC', 'STSong', 'SimSun', serif;
+
+  font: 16px/1.6 var(--cn-font);
+  color: var(--ink);
+  background: var(--paper);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  font-family: var(--cn-font);
+  font-weight: 600;
+  color: var(--ink-dark);
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  font-family: var(--cn-font);
+}
+
+a {
+  color: var(--red);
+}
